@@ -51,9 +51,6 @@ h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 
 .btn-primary:hover { text-decoration: none; filter: brightness(1.06); }
 .btn-ghost { border: 1px solid var(--border); color: var(--text); }
 .btn-ghost:hover { text-decoration: none; border-color: var(--muted); }
-.btn-soon { background: var(--panel); border: 1px solid var(--border); color: var(--muted); cursor: default; }
-.btn-soon:hover { text-decoration: none; }
-.btn-soon .badge { background: var(--accent); color: var(--accent-ink); font-size: 11px; font-weight: 800; letter-spacing: 0.08em; padding: 3px 9px; border-radius: 999px; }
 
 /* Cards */
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }

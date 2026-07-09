@@ -35,16 +35,19 @@
     background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent);
   }
   .privacy-band > p { color: #c9d0da; max-width: 62ch; margin-top: 8px; }
-  .privacy-facts { list-style: none; padding: 0; margin: 22px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .privacy-facts { list-style: none; padding: 0; margin: 22px 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 28px; }
   .privacy-facts li { color: var(--muted); font-size: 15px; }
   .privacy-facts strong { color: var(--text); display: block; margin-bottom: 4px; }
   .privacy-band a { font-size: 15px; }
   .shots { padding: 88px 0 0; }
-  .shots h2 { margin-bottom: 24px; }
-  .shots-row { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: start; }
+  .shots h2 { margin-bottom: 8px; }
+  .shots-intro { color: var(--muted); margin-bottom: 28px; }
+  .shots-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 18px; align-items: start; }
   .shots figure { margin: 0; }
+  .shots figure.wide { grid-column: 1 / -1; max-width: 760px; justify-self: center; }
   .shots img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid var(--border); background: #000; }
-  .shots figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .shots figcaption { color: var(--muted); font-size: 13.5px; margin-top: 10px; line-height: 1.45; }
+  @media (max-width: 900px) { .shots-row { grid-template-columns: repeat(2, 1fr); } }
   .cta-band {
     margin-top: 88px; padding: 56px 44px; border-radius: 22px; text-align: center;
     background: var(--panel); border: 1px solid var(--border);
@@ -121,7 +124,7 @@
       <div class="card">
         <div class="glyph"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8f54d" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg></div>
         <h3>Gym TV mode</h3>
-        <p>Connect AirPlay or HDMI and the timer takes over the big screen with a display built to be read from across the room.</p>
+        <p>AirPlay or HDMI puts a huge, high-contrast clock on the big screen. The TV shows the timer and nothing else. No sponsor card up there, no banners, ever.</p>
       </div>
       <div class="card">
         <div class="glyph"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8f54d" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div>
@@ -144,31 +147,56 @@
   <section class="story">
     <p class="kicker">Why this app exists</p>
     <h2>Made by a boxer, for boxers</h2>
-    <p>Boxing Timer was built by someone who got tired of timers that quit the moment the screen locked, silenced the bell behind a playlist, or buried round setup under menus mid-session. Every decision in this app answers one question: does it survive a real training session in a real gym?</p>
-    <p>And rounds aren't only for boxing. The same work-and-rest rhythm runs Muay Thai, MMA, kickboxing, HIIT circuits, and conditioning — so the app ships with a dedicated HIIT tab and fully custom intervals. If your training has a clock, this timer runs it.</p>
+    <p>I box. And for years my round timer was whichever free app annoyed me least. One quit the moment my screen locked. One buried the bell under my playlist. The worst one interrupted round eight with a fullscreen ad. So I built the timer I actually wanted: set your rounds, hit start, put the phone in your pocket, and trust the bell.</p>
+    <p>It isn't just for boxing, either. Rounds are rounds. Muay Thai, kickboxing, MMA, HIIT circuits, conditioning work, jump rope intervals. There's a dedicated HIIT tab, and every preset can be reworked into whatever your coach dreamed up. If your training has a clock, this runs it.</p>
   </section>
 
   <section class="privacy-band">
-    <h2>No data collected. None.</h2>
-    <p>Most free apps pay for themselves with your data. This one doesn't — it's kept free by a single sponsor card instead, so there is nothing about you to collect.</p>
+    <h2>The stuff people ask us about first</h2>
     <ul class="privacy-facts">
-      <li><strong>No account, ever.</strong> Nothing to sign up for, nothing to leak.</li>
-      <li><strong>No analytics, no ad tracking.</strong> Your presets and history live on your phone and nowhere else.</li>
-      <li><strong>One anonymous request.</strong> The app's only network call fetches the public sponsor card — identical for every user, nothing sent about you.</li>
+      <li><strong>Do I need an account?</strong> No. There is nothing to sign up for. Download it, pick your rounds, train.</li>
+      <li><strong>What data do you collect?</strong> None. No analytics, no ad tracking, no identifiers. Your presets and history stay on your phone.</li>
+      <li><strong>Will the gym TV show ads?</strong> No. The TV screen is the clock and only the clock. The single sponsor card lives on the phone's home screen and nowhere near your workout.</li>
+      <li><strong>So how is it free?</strong> One sponsor backs the app with a small card on the home screen. That card is the entire business model, which is why nothing about you needs collecting.</li>
     </ul>
-    <a href="/privacy/">Read the full privacy policy — it's two minutes long because there's nothing to disclose</a>
+    <a href="/privacy/">The full privacy policy takes two minutes to read, because there is nothing to disclose</a>
   </section>
 
   <section class="shots">
-    <h2>In the gym</h2>
+    <h2>Every screen, nothing hidden</h2>
+    <p class="shots-intro">This is the whole app. What you see here is what you get on day one, free.</p>
     <div class="shots-row">
       <figure>
-        <img src="/assets/screenshots/tv.jpg" alt="Boxing Timer gym TV scene showing a green work round with a large countdown">
-        <figcaption>The gym TV scene — AirPlay or HDMI, readable from the far bag</figcaption>
+        <img src="/assets/screenshots/home.jpg" alt="Home screen with boxing presets, a segmented ring, and a large start button">
+        <figcaption>Pick rounds, work, rest. Hit start.</figcaption>
       </figure>
       <figure>
-        <img src="/assets/screenshots/home.jpg" alt="Boxing Timer home screen with preset cards and start button">
-        <figcaption>Rounds, work, and rest set in seconds</figcaption>
+        <img src="/assets/screenshots/session.jpg" alt="A running work round with the countdown and round number">
+        <figcaption>Mid-round. Readable at arm's length or across the gym.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/screenshots/history.jpg" alt="History screen with weekly stats and logged workouts">
+        <figcaption>Your streak and every session, kept on your phone.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/screenshots/hiit.jpg" alt="HIIT tab with Tabata and interval presets">
+        <figcaption>Not just boxing: Tabata, EMOM, and your own intervals.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/screenshots/customize.jpg" alt="Customize screen for editing presets">
+        <figcaption>Every preset editable down to the second.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/screenshots/settings.jpg" alt="Settings screen with sound choices">
+        <figcaption>Pick a sound and hear it right away.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/screenshots/home-blue.jpg" alt="The home screen re-themed in the blue accent color">
+        <figcaption>Green, red, blue, or orange. Your corner, your colors.</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="/assets/screenshots/tv.jpg" alt="The gym TV scene: a large green work round countdown">
+        <figcaption>On the gym TV: the clock and only the clock. The sponsor card never leaves the phone.</figcaption>
       </figure>
     </div>
   </section>
